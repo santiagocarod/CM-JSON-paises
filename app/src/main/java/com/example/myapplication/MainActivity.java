@@ -7,11 +7,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
     Button web,frame,list;
     Spinner spinner;
+    EditText user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,12 +25,17 @@ public class MainActivity extends AppCompatActivity {
         web = findViewById(R.id.web);
         list = findViewById(R.id.list);
         spinner = findViewById(R.id.spinnerEducativo);
+        user = findViewById(R.id.usuario);
 
         frame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getBaseContext(),FrameActivity.class));
+                Intent intent = new Intent(getBaseContext(),FrameActivity.class);
                 Log.i("LAYOUTS","Item: "+spinner.getSelectedItem());
+                intent.putExtra("item",spinner.getSelectedItem().toString());
+                intent.putExtra("usuario",user.getText().toString());
+                startActivity(intent);
+
             }
         });
         web.setOnClickListener(new View.OnClickListener() {
