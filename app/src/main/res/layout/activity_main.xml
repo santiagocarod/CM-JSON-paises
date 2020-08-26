@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="15dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/usuario"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="imagenAndroid"
+        app:srcCompat="@drawable/android" />
+
+    <EditText
+        android:id="@+id/usuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/Usuario"
+        android:inputType="textPersonName"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="20dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerEducativo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usuario"
+        android:entries="@array/nivelEducativo"
+        android:layout_marginBottom="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@id/spinnerEducativo">
+
+        <Button
+            android:id="@+id/web"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/web" />
+
+        <Button
+            android:id="@+id/frame"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/frame" />
+
+        <Button
+            android:id="@+id/list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/list" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="web">WEB</string>
+    <string name="frame">FRAME</string>
+    <string name="list">LIST</string>
+    <string name="Usuario">Usuario</string>
+    <string-array name="nivelEducativo">
+        <item>Primaria</item>
+        <item>Bachiller</item>
+        <item>Tecnico</item>
+        <item>Profesional</item>
+        <item>Maestria</item>
+        <item>Doctorado</item>
+        <item>Postdoctorado</item>
+    </string-array>
+</resources>
