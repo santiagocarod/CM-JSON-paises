@@ -46,7 +46,10 @@ public class ListActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Pais pais = (Pais) adapterView.getItemAtPosition(i);
                 Intent intent = new Intent(getBaseContext(),detailActivity.class);
-                //intent.putExtra("Capital",pais.getCapital());
+                intent.putExtra("capital",pais.getCapital());
+                intent.putExtra("name",pais.getName());
+                intent.putExtra("intlName",pais.getInternationalName());
+                intent.putExtra("initials",pais.getInitials());
                 startActivity(intent);
             }
         });
